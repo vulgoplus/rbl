@@ -12,27 +12,29 @@
 	<link rel="stylesheet" type="text/css" href="css/style.css">
 </head>
 <body>
-	<header class="header">
+	<header class="header relative">
 		<div class="logo">
 			<img src="img/logo.png">
 		</div>
-		<div class="container flex">
-			<ul>
-				<li><a href="#">About Us</a></li>
-				<li><a href="#">Services</a></li>
-				<li><a href="#">Our Team</a></li>
-				<li><a href="#">Blog</a></li>
-				<li><a href="#">Products</a></li>
-				<li><a href="#">Requirement</a></li>
-				<li><a href="#">Contact Us</a></li>
-			</ul>
+		<div class="container">
+			<div id="menu-toggle" class="flex animated hidden">
+				<ul>
+					<li><a href="#">About Us</a></li>
+					<li><a href="#">Services</a></li>
+					<li><a href="#">Our Team</a></li>
+					<li><a href="#">Blog</a></li>
+					<li><a href="#">Products</a></li>
+					<li><a href="#">Requirement</a></li>
+					<li><a href="#">Contact Us</a></li>
+				</ul>
 
-			<form class="search-form">
-				<input type="text" name="s" placeholder="Key search">
-				<button><i class="fa fa-search"></i></button>
-			</form>
+				<form class="search-form">
+					<input type="text" name="s" placeholder="Key search">
+					<button><i class="fa fa-search"></i></button>
+				</form>
+			</div>
 
-			<div class="ricon rclose">
+			<div class="ricon rmenu">
 			</div>
 		</div>
 	</header> <!-- /.header -->

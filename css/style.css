@@ -13,8 +13,10 @@ canvas {
     bottom: 0;
 }
 
-.flex{
-	display: flex;
+@media(min-width: 992px){
+	.flex{
+		display: flex;
+	}
 }
 
 
@@ -31,7 +33,13 @@ header{
 .logo{
 	line-height: 78px;
 	position: absolute;
-	left: 40px;
+	left: 15px;
+}
+
+@media(min-width: 992px){
+	.logo{
+		left: 40px;
+	}
 }
 
 .header ul{
@@ -40,23 +48,59 @@ header{
 	list-style: none;
 }
 
-.header ul li{
-	display: inline-block;
-	line-height: 78px;
-	margin-left: 25px;
-	margin-right: 25px;
-}
-
 .header ul li a{
 	color: #fff;
+	font-size: 16px;
+	line-height: 50px;
 }
 
-.header ul li:first-child{
-	margin-left: 0;
+@media(min-width: 1200px){
+	.header ul li{
+		display: inline-block;
+		line-height: 78px;
+		margin-left: 25px;
+		margin-right: 25px;
+	}
+
+	.header ul li:first-child{
+		margin-left: 0;
+	}
+
+	.header ul li:last-child{
+		margin-right: 0;
+	}
 }
 
-.header ul li:last-child{
-	margin-right: 0;
+#menu-toggle{
+	padding-top: 50px;
+	position: fixed;
+	top: 0;
+	bottom: 0;
+	left: 0;
+	right: 0;
+	background: rgba(0,0,0,0.7);
+	z-index: 100;
+	text-align: center;
+	width: 100%;
+}
+
+@media(min-width: 992px){
+	#menu-toggle{
+		padding-top: 0;
+		position: static;
+		background: transparent;
+	}
+}
+
+#menu-toggle ul li{
+	display: block;
+	text-align: center;
+}
+
+@media(min-width: 1200px){
+	#menu-toggle ul li{
+		display: inline-block;
+	}
 }
 
 .search-form{
@@ -92,10 +136,22 @@ header{
 .ricon{
 	line-height: 78px;
 	position: absolute;
-	right: 70px;
+	top: 0;
+	right: 15px;
 	cursor: pointer;
 	width: 28px;
 	height: 78px;
+	z-index: 500;
+}
+
+@media(min-width: 992px){
+	.ricon{
+		right: 70px;
+	}
+}
+
+.relative{
+	position: relative;
 }
 
 .rclose{
@@ -507,9 +563,17 @@ img{
 
 .index-footer{
 	position: absolute;
-	bottom: 65px;
+	bottom: 30px;
 	width: 100%;
 }
+
+@media(min-width: 992px){
+	.index-footer{
+		bottom: 65px;
+	}
+}
+
+
 
 @media(min-width: 992px){
 	.index-footer .index-footer{

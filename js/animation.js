@@ -19,6 +19,16 @@ $(document).ready(function(){
     	fade: true
     });
 
+    $('.ricon').click(function(){
+        if($(this).hasClass('rclose')){
+            $(this).removeClass('rclose').addClass('rmenu');
+            $('#menu-toggle').removeClass('fadeInRight').addClass('fadeOutRight');
+        }else{
+            $(this).removeClass('rmenu').addClass('rclose');
+            $('#menu-toggle').removeClass('hidden').addClass('fadeInRight').removeClass('fadeOutRight');
+        }
+    });
+
     function doAnimations(elements) {
         var animationEndEvents = 'webkitAnimationEnd mozAnimationEnd MSAnimationEnd oanimationend animationend';
         elements.each(function() {
